@@ -52,19 +52,14 @@ function percent() {
 
 //operator buttons
 addBtn.addEventListener('click', function() {
-    if(operator) {
-        return;
-    }
     if(prevNumber !== '') {  
         operate();
         }
    operator = 'add';  
+   
    moveNumbers();
 });
 subBtn.addEventListener('click', function() {
-    if(operator) {
-        return;
-    }
     if(prevNumber !== '') {  
         operate();
         }
@@ -72,9 +67,6 @@ subBtn.addEventListener('click', function() {
     moveNumbers();
 });
 multiplyBtn.addEventListener('click', function() {
-    if(operator) {
-        return;
-    }
     if(prevNumber !== '') {  
         operate();
         }
@@ -82,9 +74,6 @@ multiplyBtn.addEventListener('click', function() {
     moveNumbers();
 });
 divideBtn.addEventListener('click', function() {
-    if(operator) {
-        return;
-    }
     if(prevNumber !== '') {  
         operate();
         }
@@ -92,9 +81,6 @@ divideBtn.addEventListener('click', function() {
     moveNumbers();
 });
 remainderBtn.addEventListener('click', function() {
-    if(operator) {
-        return;
-    }
     if(prevNumber !== '') {  
         operate();
         }
@@ -106,7 +92,8 @@ dotBtn.addEventListener('click', function() {
     if(!currNumber.includes('.')) {
         currNumber += '.';
     }
-})
+});
+
 //move the numbers 
 function moveNumbers() {
     prevNumber = currNumber;
